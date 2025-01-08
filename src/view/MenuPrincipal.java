@@ -1,13 +1,19 @@
+package view;
+
+import crud.AgregarContactos;
+import crud.BorrarContactos;
+import crud.BuscarOModificarContacto;
+import crud.VerContactos;
+import models.Contacto;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuPrincipal {
+
     protected static String nombreContacto;
     protected static String numeroContacto;
     protected static String entradaUsuario;
-
     protected static Scanner sc = new Scanner(System.in);
-
     protected static ArrayList<Contacto> contactos = new ArrayList<Contacto>();
 
     public static void mostrarMenuPrincipal() {
@@ -16,9 +22,9 @@ public class MenuPrincipal {
         do {
             System.out.println(" ");
             System.out.println("::Bienvenido a tu agenda de contactos::");
-            System.out.println("     1. Agregar Nuevo Contacto.");
-            System.out.println("     2. Buscar y/o Modificar un Contacto.");
-            System.out.println("     3. Borrar un Contacto.");
+            System.out.println("     1. Agregar nuevo contacto.");
+            System.out.println("     2. Buscar y/o modificar un contacto.");
+            System.out.println("     3. Borrar un contacto.");
             System.out.println("     4. Ver todos los contactos.");
             System.out.println("     0. Salir");
             System.out.print("Ingresa tu opcion: ");

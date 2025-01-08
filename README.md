@@ -1,19 +1,33 @@
 # AGENDA DE CONTACTOS
 
-Imagen de muestra...
-![Imagen de Muestra](images/imagenMuestra.png)
+Inicio de la aplicación:
+![Imagen de Muestra](images/inicio.png)
 
-- Es una agenda de contactos creada en Java con funciones como:
+## Descripción: 
+Este proyecto es una aplicación de consola para gestionar una
+agenda de contactos, desarrollada en Java, utilizando estructuras
+de datos y principios de programación orientada a objetos, la
+aplicación incluye validación de datos para garantizar que los 
+datos ingresados por el usuario sean correctos, válidos y estén
+completos.
+
+### Funciones de la aplicación:
     - Agregar Contactos.
     - Buscar o modificar un contacto.
     - Borrar un contacto.
     - Ver todos los contactos.
 <br>
-Nota: Incluye validacion de datos.
-    
+
+- Modificación de un contacto:
+![modificar.png](images/modificar.png)  
+
+<br><br>
+- Listado de contactos agregados:
+![contactosAgregados.png](images/contactosAgregados.png)
+
 ## Objetivos del proyecto:
 
-1. Poner en practica los conocimientos adquiridos en los cursos que tome sobre
+1. Poner en practica los conocimientos adquiridos en los cursos sobre
 programación orientada a objetos con Java:
     
     - Abstracción.

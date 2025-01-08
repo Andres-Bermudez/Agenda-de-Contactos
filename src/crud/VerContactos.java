@@ -1,6 +1,11 @@
+package crud;
+
+import models.Contacto;
+import view.MenuPrincipal;
+
 public class VerContactos extends MenuPrincipal {
 
-    protected static void verContactos() {
+    public static void verContactos() {
         if (MenuPrincipal.contactos.isEmpty()) {
             System.out.println();
             System.out.println("        O _ O             ");

@@ -1,7 +1,12 @@
+package crud;
+
+import models.Contacto;
+import view.MenuPrincipal;
+
 public class BuscarOModificarContacto extends MenuPrincipal {
 
-    protected static void buscarOModificarContacto() {
-        if (contactos.isEmpty()) {
+    public static void buscarOModificarContacto() {
+        if (MenuPrincipal.contactos.isEmpty()) {
             System.out.println();
             System.out.println("        O _ O             ");
             System.out.println("Upss...Tu agenda esta vacia");
@@ -11,33 +16,35 @@ public class BuscarOModificarContacto extends MenuPrincipal {
             System.out.println("Buscando Contacto...");
             System.out.print("Ingresa el nombre del contacto buscado: ");
 
-            entradaUsuario = sc.nextLine();
+            MenuPrincipal.entradaUsuario = MenuPrincipal.sc.nextLine();
 
-            for(Contacto i : contactos) {
-                if (entradaUsuario.equals(i.getNombre())) {
+            for(Contacto i : MenuPrincipal.contactos) {
+                if (MenuPrincipal.entradaUsuario.equals(i.getNombre())) {
                     System.out.println();
                     System.out.println("Contacto encontrado:");
                     System.out.println(i);
                     System.out.println();
-                    System.out.println("1. Modificar Contacto.");
+                    System.out.println("1. Modificar contacto.");
                     System.out.println("0. Regresar al menu principal.");
                     System.out.print("Ingresa tu opcion: ");
 
-                    entradaUsuario = sc.nextLine();
+                    MenuPrincipal.entradaUsuario = MenuPrincipal.sc.nextLine();
 
-                    if (entradaUsuario.equals("1")) {
+                    if (MenuPrincipal.entradaUsuario.equals("1")) {
                         modificarContacto();
 
-                    } else if (entradaUsuario.equals("0")) {
-                        mostrarMenuPrincipal();
+                    } else if (MenuPrincipal.entradaUsuario.equals("0")) {
+                        MenuPrincipal.mostrarMenuPrincipal();
 
                     } else {
                         System.out.println("Opcion no disponible, Intentalo nuevamente!");
                         MenuPrincipal.mostrarMenuPrincipal();
                     }
+                } else {
+                    System.out.println("¡El contacto buscado no existe!");
+
                 }
             }
-            System.out.println("¡El contacto buscado no existe!");
         }
     }
 
@@ -48,28 +55,28 @@ public class BuscarOModificarContacto extends MenuPrincipal {
         System.out.println("0. Regresar al menu principal.");
         System.out.print("Ingresa tu opcion: ");
 
-        entradaUsuario = sc.nextLine();
+        MenuPrincipal.entradaUsuario = MenuPrincipal.sc.nextLine();
 
-        if (entradaUsuario.equals("1")) {
+        if (MenuPrincipal.entradaUsuario.equals("1")) {
             System.out.println();
             System.out.print("Ingresa el nuevo nombre de tu contacto: ");
-            entradaUsuario = sc.nextLine();
+            MenuPrincipal.entradaUsuario = MenuPrincipal.sc.nextLine();
 
-            for(Contacto i : contactos) {
-                if (nombreContacto.equals(i.getNombre())) {
-                    i.setNombre(entradaUsuario);
+            for(Contacto i : MenuPrincipal.contactos) {
+                if (MenuPrincipal.nombreContacto.equals(i.getNombre())) {
+                    i.setNombre(MenuPrincipal.entradaUsuario);
                     System.out.println(">>> ¡Contacto modificado correctamente! <<<");
                 }
             }
 
-        } else if (entradaUsuario.equals("2")) {
+        } else if (MenuPrincipal.entradaUsuario.equals("2")) {
             System.out.println();
             System.out.print("Ingresa el nuevo numero de telefono de tu contacto: ");
-            entradaUsuario = sc.nextLine();
+            MenuPrincipal.entradaUsuario = MenuPrincipal.sc.nextLine();
 
-            for(Contacto i : contactos) {
-                if (nombreContacto.equals(i.getNombre())) {
-                    i.setNumeroTelefono(entradaUsuario);
+            for(Contacto i : MenuPrincipal.contactos) {
+                if (MenuPrincipal.nombreContacto.equals(i.getNombre())) {
+                    i.setNumeroTelefono(MenuPrincipal.entradaUsuario);
                     System.out.println(">>> ¡Contacto modificado correctamente! <<<");
                 }
             }
